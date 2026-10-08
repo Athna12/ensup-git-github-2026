@@ -46,3 +46,25 @@ ne contenait encore le fichier.
 
 git log -- acces.md filtre l'historique et n'affiche que les
 commits qui ont modifié ce fichier.
+
+
+TP 2 : Une branche pour une évolution
+
+2. Enregistrer l'évolution
+
+Avant de revenir sur main, prédisez quels fichiers seront visibles.
+
+ceux qui ne sont ni dans le gitignore et dans la branche main
+
+3. Observer puis intégrer
+
+$ git switch main
+$ ls
+README.md  acces.md  journal.md  notes-privees.txt
+
+$ git merge feature/programme
+Updating 9b9e8fd..f65b06e
+Fast-forward
+ rendus/Athna12/programme.md | 4 ++++
+
+ 
