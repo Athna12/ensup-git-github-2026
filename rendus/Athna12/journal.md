@@ -98,3 +98,15 @@ be0cefb 2c1b5e8 11745f8 merge: ajouter les indications d accessibilite
 
 Pourquoi pas de conflit ?
 Les deux branche modifie un fichier différent donc pas de problème pour les combinés.
+
+TP 3 : envoyer au formateur · 35 minutes
+
+C. Constater la mise à jour automatique · 8 minutes
+
+https://github.com/AbidHamza/ensup-git-github-2026/pull/3
+
+Fork permet de faire une copie d'un dépot
+
+- Clone une copie du repot sur mon ordinateur.
+
+- Branche : une ligne de travail à l'intérieur d'un même dépôt
