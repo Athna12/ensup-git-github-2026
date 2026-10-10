@@ -67,4 +67,24 @@ Updating 9b9e8fd..f65b06e
 Fast-forward
  rendus/Athna12/programme.md | 4 ++++
 
- 
+4. Expliquer
+
+Sur quelle branche faut-il être pour intégrer une évolution dans main ?
+Il faut être SUR main (git switch main), puis lancer git merge feature/programme.
+
+Quelle commande prouve que le contenu est présent ?
+$ ls
+README.md  acces.md  journal.md  notes-privees.txt  programme.md
+
+9b9e8fd ── f65b06e
+     ↑          ↑
+    main   feature/programme
+
+Graphe après la fusion (fast-forward) :
+
+  9b9e8fd ── f65b06e
+                ↑
+     main, feature/programme
+
+
+Enquête 2 : divergence sans conflit · 15 minutes
