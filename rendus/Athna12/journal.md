@@ -88,3 +88,13 @@ Graphe après la fusion (fast-forward) :
 
 
 Enquête 2 : divergence sans conflit · 15 minutes
+
+point de départ commun : 66660e7
+feature/accessibilite : ajout de accessibilite.md (11745f8)
+main : ajout de l'horaire d'accueil dans README.md (2c1b5e8)
+
+$ git show --no-patch --format="%h %p %s" HEAD
+be0cefb 2c1b5e8 11745f8 merge: ajouter les indications d accessibilite
+
+Pourquoi pas de conflit ?
+Les deux branche modifie un fichier différent donc pas de problème pour les combinés.
