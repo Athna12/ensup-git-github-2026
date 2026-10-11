@@ -181,3 +181,23 @@ Celle de main puisque c’est la branche sur laquelle j’étais au moment du me
 À quoi sert git merge --abort pendant une fusion en cours ?
 
 Il annule la fusion et remet le dépôt dans l’état d’avant le git merge. C’est utile si on veut réfléchir ou demander avant de décider.
+
+
+Incident distant : le programme modifié en ligne · 20 minutes
+
+Situation :
+
+sur GitHub : ajout de "12h00 : visite libre des stands, Hall A." dans programme.md (commit 94846c5)
+ 
+en local : ajout de "Prévoir une arrivée dix minutes avant le premier atelier." dans README.md (commit c27367e)
+
+Les deux sont parties de 4bae8d0 et ont avancé chacune de leur côté.
+
+Pourquoi fetch seul n'aurait pas ajouté la visite libre à mon fichier ?
+
+git fetch télécharge les commits de GitHub et met à jour le repère origin/main (ici de 4bae8d0 à 94846c5)
+Mais il ne touche ni à ma branche main ni à mes fichiers.
+Après le fetch, le commit 94846c5 était sur mon PC mais programme.md ne contenait toujours pas la ligne de 12h00.
+Il a fallu git merge origin/main pour intégrer ce commit dans mon main et donc dans mes fichiers.
+
+Fusion sans conflit (commit e86c26b) : les deux modifications portent sur des fichiers différents (programme.md et README.md).
