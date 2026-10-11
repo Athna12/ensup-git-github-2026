@@ -110,3 +110,37 @@ Fork permet de faire une copie d'un dépot
 - Clone une copie du repot sur mon ordinateur.
 
 - Branche : une ligne de travail à l'intérieur d'un même dépôt
+
+Enquête 3 : pourquoi mon push est refusé ? · 15 minutes
+
+1. Permission denied : votre origin vise-t-il votre fork ou le dépôt du formateur ? Quel compte est connecté ?
+
+GitHub me reconnaît mais je n'ai pas le droit d'écrire dans ce dépôt.
+
+utiliser git remote -v pour savoir si on vise le fork ou le depot,
+
+Problème rencontrer : "Authentication failed" à cause d'un ancien identifiant mémorisé.
+Corrigé en le supprimant (git credential reject) puis en me reconnectant via le navigateur.
+
+2. non-fast-forward : des commits ont-ils été créés sur GitHub depuis votre dernier envoi ? 
+Quelle commande récupère les repères sans fusionner ?
+
+GitHub contient des commits que je n'ai pas en local
+Mon main et celui de GitHub ont divergé, donc Git refuse le push pour ne pas effacer ces commits.
+
+git fetch origin permet de récupérer sans fusionner
+
+Utiliser git log --oneline --graph --all pour vérifier
+
+Il faut ensuiste faire git pull puis git push.
+
+3. nothing to commit alors que le fichier paraît modifié : 
+est-il enregistré, dans le bon dossier, ignoré ou déjà commité ?
+
+1 Vérifier si le fichier est enregistrer dans l'éditeur
+
+2 Vérifier que je suis dans le bon dossier , utiliser pwd et après git status
+
+3 Le fichier est ignoré: faire git check-ignore -v lenomdufichier , qui affiche la ligne qui bloque le fichier dans .gitignore
+
+4 déjà commitéé? : faire git log --oneline -1 --lenomdufichier
