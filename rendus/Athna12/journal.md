@@ -148,3 +148,36 @@ est-il enregistré, dans le bon dossier, ignoré ou déjà commité ?
 TP 4 : faire relire une modification · 40 minutes
 Lien PR binome:
 https://github.com/Athna12/ensup-git-github-2026/pull/1
+
+
+TP 5 : Le laboratoire des erreurs
+
+Préparation : dossier labo-conflit, commit de référence 2b4eda3
+
+git restore --staged brouillon.txt retire le fichier de l'index sans le supprimer
+Puis commit c5e8733
+
+git revert --no-edit HEAD crée le commit inverse 4eaf1a5 mais c5e8733 reste dans l'historique
+
+$ git show --no-patch --format="%h %p %s" HEAD
+bc8480e ca185e4 9f34ab3 fix: convenir de 09h45
+commit de fusion : bc8480e
+1er parent : ca185e4 (main, 09h30)
+2e parent : 9f34ab3 (feature/horaire, 10h00)
+
+
+
+
+F. Expliquer · 5 minutes
+Montrez le résultat à votre binôme. Répondez :  
+
+
+pourquoi Git n'a-t-il pas choisi seul ?
+Les deux branches ont modifié la même ligne de façon différente Git ne sait pas quelle valeur est la bonne.
+
+Quelle version était HEAD ?
+Celle de main puisque c’est la branche sur laquelle j’étais au moment du merge.
+
+À quoi sert git merge --abort pendant une fusion en cours ?
+
+Il annule la fusion et remet le dépôt dans l’état d’avant le git merge. C’est utile si on veut réfléchir ou demander avant de décider.
