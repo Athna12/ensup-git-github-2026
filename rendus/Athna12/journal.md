@@ -144,3 +144,7 @@ est-il enregistré, dans le bon dossier, ignoré ou déjà commité ?
 3 Le fichier est ignoré: faire git check-ignore -v lenomdufichier , qui affiche la ligne qui bloque le fichier dans .gitignore
 
 4 déjà commitéé? : faire git log --oneline -1 --lenomdufichier
+
+TP 4 : faire relire une modification · 40 minutes
+Lien PR binome:
+https://github.com/Athna12/ensup-git-github-2026/pull/1
