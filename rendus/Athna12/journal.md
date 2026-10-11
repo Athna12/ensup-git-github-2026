@@ -201,3 +201,48 @@ Après le fetch, le commit 94846c5 était sur mon PC mais programme.md ne conten
 Il a fallu git merge origin/main pour intégrer ce commit dans mon main et donc dans mes fichiers.
 
 Fusion sans conflit (commit e86c26b) : les deux modifications portent sur des fichiers différents (programme.md et README.md).
+
+Mission finale : une version utilisable · 75 minutes
+
+Étape 3 : demander une revue · 15 minutes
+
+https://github.com/Athna12/ensup-git-github-2026/pull/3
+
+
+Contrôle de rendu individuel
+
+Que copie add ?
+
+git add copie l'état actuel du fichier du dossier de travail vers l'index
+
+Comment prouver qu'un commit a été poussé ?
+
+git status affiche "Your branch is up to date with 'origin/main'"
+git log --oneline montre origin/main sur le même commit que main
+le commit apparaît sur GitHub dans l'onglet Commits de mon fork
+
+Pourquoi Git n'a-t-il pas choisi l'horaire ?
+
+Git ne peut pas savoir quelle valeur est la bonne
+
+Que reste-t-il après revert ?
+
+Le commit annulé reste dans l'historique
+
+Un diff dont je suis l'auteur :
+
+$ git show 94846c5
+commit 94846c53c32ec6ec6622fc09497274b6f933a920
+Author: Nathanaël <132097635+Athna12@users.noreply.github.com>
+Date:   Sun Oct 11 14:17:25 2026 +0200
+
+    ajout la visite libre de 12h00
+
+diff --git a/rendus/Athna12/programme.md b/rendus/Athna12/programme.md
+--- a/rendus/Athna12/programme.md
++++ b/rendus/Athna12/programme.md
+@@ -2,3 +2,4 @@
+ 09h00 : accueil : Hall A
+ 10h00 : découverte des associations : Salle 1
+ 11h00 : atelier découverte : Salle 2
++12h00 : visite libre des stands, Hall A.
